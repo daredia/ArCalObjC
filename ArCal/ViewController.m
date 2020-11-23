@@ -13,9 +13,27 @@
 
 @implementation ViewController
 
+NSString *cellId = @"cellId";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+//    self.view.backgroundColor = [UIColor yellowColor];
+    self.navigationItem.title = @"Events";
+    self.navigationController.navigationBar.prefersLargeTitles = YES;
+
+    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:cellId];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 5;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    cell.backgroundColor = UIColor.lightGrayColor;
+    cell.textLabel.text = @"Event title";
+    return cell;
 }
 
 
