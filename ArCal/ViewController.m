@@ -44,13 +44,26 @@ NSString *cellId = @"cellId";
     return self.events.count;
 }
 
+- (NSString *)getEventCellText:(Event *)event {
+    NSString *startTime;
+    NSDateFormatter *dateFormatter = NSDateFormatter.new;
+    [dateFormatter setDateFormat:@"h:mm"];
+    startTime = [dateFormatter stringFromDate:event.startTime];
+
+    NSMutableArray *cellLabelTexts = NSMutableArray.new;
+    [cellLabelTexts addObject:startTime];
+    [cellLabelTexts addObject:event.title];
+
+    return [cellLabelTexts componentsJoinedByString:@" "];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
 
     Event *event = self.events[indexPath.row];
 
     cell.backgroundColor = UIColor.lightGrayColor;
-    cell.textLabel.text = event.title;
+    cell.textLabel.text =  [self getEventCellText:event];
     return cell;
 }
 
