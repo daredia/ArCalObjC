@@ -1,0 +1,516 @@
+{
+  "kind": "calendar#events",
+  "summary": "redacted@gmail.com",
+  "updated": "2020-11-25T20:12:03.786Z",
+  "timeZone": "America/Chicago",
+  "accessRole": "owner",
+  "defaultReminders": [
+    {
+      "method": "popup",
+      "minutes": 10
+    }
+  ],
+  "items": [
+    {
+      "kind": "calendar#event",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=MTdhNHJuYzAyNGlnbWJndWp2Ymo5MTF1MzAgc2hlaHphZC5kYXJlZGlhQG0",
+      "created": "2020-11-24T02:26:52.000Z",
+      "updated": "2020-11-25T02:45:56.824Z",
+      "summary": "lift - chest, legs, triceps",
+      "creator": {
+        "email": "redacted@gmail.com"
+      },
+      "organizer": {
+        "email": "redacted@gmail.com",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2020-11-25T11:00:00-06:00"
+      },
+      "end": {
+        "dateTime": "2020-11-25T12:00:00-06:00"
+      },
+      "transparency": "transparent",
+      "sequence": 3,
+      "guestsCanModify": true,
+      "reminders": {
+        "useDefault": true
+      }
+    },
+    {
+      "kind": "calendar#event",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=N3FwNmNnNmhtNjF2MzU0czBvcWYyMm1iM28gc2hlaHphZC5kYXJlZGlhQG0",
+      "created": "2020-04-13T00:20:01.000Z",
+      "updated": "2020-11-23T06:41:36.609Z",
+      "summary": "the league",
+      "creator": {
+        "email": "redacted@gmail.com"
+      },
+      "organizer": {
+        "email": "redacted@gmail.com",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2020-11-25T23:00:00-06:00"
+      },
+      "end": {
+        "dateTime": "2020-11-25T23:50:00-06:00"
+      },
+      "sequence": 67,
+      "guestsCanModify": true,
+      "reminders": {
+        "useDefault": true
+      }
+    },
+    {
+      "kind": "calendar#event",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=M3R0NHAzYjFsbTBsZjRxNzhocTAyZjlvbzYgc2hlaHphZC5kYXJlZGlhQG0",
+      "created": "2020-11-25T02:46:31.000Z",
+      "updated": "2020-11-25T02:46:31.951Z",
+      "summary": "haircut maybe",
+      "creator": {
+        "email": "redacted@gmail.com"
+      },
+      "organizer": {
+        "email": "redacted@gmail.com",
+        "self": true
+      },
+      "start": {
+        "date": "2020-11-26"
+      },
+      "end": {
+        "date": "2020-11-27"
+      },
+      "transparency": "transparent",
+      "sequence": 0,
+      "guestsCanModify": true,
+      "reminders": {
+        "useDefault": false,
+        "overrides": [
+          {
+            "method": "popup",
+            "minutes": 10
+          }
+        ]
+      }
+    },
+    {
+      "kind": "calendar#event",
+      "status": "tentative",
+      "htmlLink": "https://www.google.com/calendar/event?eid=YTdmMW9mbWlxaGt2M2ZmZGp2aWpwNDhjaTBfMjAyMDExMjYgc2hlaHphZC5kYXJlZGlhQG0",
+      "created": "2010-12-31T15:00:50.000Z",
+      "updated": "2018-11-21T21:01:53.691Z",
+      "summary": "Thanksgiving Day",
+      "creator": {
+        "email": "redacted@gmail.com",
+        "displayName": "Shehzad Daredia",
+        "self": true
+      },
+      "organizer": {
+        "email": "redacted@gmail.com",
+        "displayName": "Shehzad Daredia",
+        "self": true
+      },
+      "start": {
+        "date": "2020-11-26"
+      },
+      "end": {
+        "date": "2020-11-27"
+      },
+      "recurringEventId": "a7f1ofmiqhkv3ffdjvijp48ci0_R20161124",
+      "originalStartTime": {
+        "date": "2020-11-26"
+      },
+      "transparency": "transparent",
+      "visibility": "private",
+      "sequence": 3,
+      "attendees": [
+        {
+          "email": "redacted@gmail.com",
+          "displayName": "Shehzad Daredia",
+          "organizer": true,
+          "self": true,
+          "responseStatus": "accepted"
+        }
+      ],
+      "reminders": {
+        "useDefault": false
+      }
+    },
+    {
+      "kind": "calendar#event",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=NDk0ODdmNzBxdXI0NzVzZzJmNDZjajZnZW0gc2hlaHphZC5kYXJlZGlhQG0",
+      "created": "2020-11-25T02:51:49.000Z",
+      "updated": "2020-11-25T02:51:49.290Z",
+      "summary": "maybe tennis with amber",
+      "creator": {
+        "email": "redacted@gmail.com"
+      },
+      "organizer": {
+        "email": "redacted@gmail.com",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2020-11-26T08:30:00-06:00"
+      },
+      "end": {
+        "dateTime": "2020-11-26T09:20:00-06:00"
+      },
+      "sequence": 0,
+      "guestsCanModify": true,
+      "reminders": {
+        "useDefault": true
+      }
+    },
+    {
+      "kind": "calendar#event",
+      "status": "tentative",
+      "htmlLink": "https://www.google.com/calendar/event?eid=YW4zOWtkazZkamFxZGp1N2tuZ2prMm92Y2tfMjAyMDExMjcgc2hlaHphZC5kYXJlZGlhQG0",
+      "created": "2010-08-31T02:17:50.000Z",
+      "updated": "2020-06-28T04:55:05.751Z",
+      "summary": "N Deposit Rent Check",
+      "description": "pay apt rent check",
+      "creator": {
+        "email": "redacted@gmail.com"
+      },
+      "organizer": {
+        "email": "redacted@gmail.com",
+        "displayName": "Shehzad Daredia",
+        "self": true
+      },
+      "start": {
+        "date": "2020-11-27"
+      },
+      "end": {
+        "date": "2020-11-28"
+      },
+      "recurringEventId": "an39kdk6djaqdju7kngjk2ovck_R20200627",
+      "originalStartTime": {
+        "date": "2020-11-27"
+      },
+      "transparency": "transparent",
+      "sequence": 7,
+      "attendees": [
+        {
+          "email": "redacted@gmail.com",
+          "displayName": "Shehzad Daredia",
+          "organizer": true,
+          "self": true,
+          "responseStatus": "accepted"
+        }
+      ],
+      "reminders": {
+        "useDefault": false,
+        "overrides": [
+          {
+            "method": "popup",
+            "minutes": 10
+          }
+        ]
+      }
+    },
+    {
+      "kind": "calendar#event",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=NGh1NDJvcXVxY2lndXIzazI4cDhuaGhhYjcgc2hlaHphZC5kYXJlZGlhQG0",
+      "created": "2020-07-23T20:06:55.000Z",
+      "updated": "2020-09-08T04:56:36.078Z",
+      "summary": "tyson and nate robinson fights",
+      "creator": {
+        "email": "redacted@gmail.com"
+      },
+      "organizer": {
+        "email": "redacted@gmail.com",
+        "self": true
+      },
+      "start": {
+        "date": "2020-11-28"
+      },
+      "end": {
+        "date": "2020-11-29"
+      },
+      "transparency": "transparent",
+      "sequence": 1,
+      "guestsCanModify": true,
+      "reminders": {
+        "useDefault": false,
+        "overrides": [
+          {
+            "method": "popup",
+            "minutes": 10
+          }
+        ]
+      }
+    },
+    {
+      "kind": "calendar#event",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=NDFzbnZlODhpc3RyNTBzc2g3NmNsNWFpcjUgc2hlaHphZC5kYXJlZGlhQG0",
+      "created": "2020-11-16T04:41:06.000Z",
+      "updated": "2020-11-23T18:02:50.037Z",
+      "summary": "mom works",
+      "creator": {
+        "email": "redacted@gmail.com"
+      },
+      "organizer": {
+        "email": "redacted@gmail.com",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2020-11-28T15:30:00-06:00"
+      },
+      "end": {
+        "dateTime": "2020-11-28T21:45:00-06:00"
+      },
+      "sequence": 1,
+      "guestsCanModify": true,
+      "reminders": {
+        "useDefault": true
+      }
+    },
+    {
+      "kind": "calendar#event",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=Y2YzYmVxNmYyNWNpamVhdTI3cWFxaXZzdmNfMjAyMDExMjkgc2hlaHphZC5kYXJlZGlhQG0",
+      "created": "2011-11-29T19:14:22.000Z",
+      "updated": "2018-11-29T19:58:47.453Z",
+      "summary": "daryl's bday",
+      "creator": {
+        "email": "redacted@gmail.com",
+        "displayName": "Shehzad Daredia",
+        "self": true
+      },
+      "organizer": {
+        "email": "redacted@gmail.com",
+        "displayName": "Shehzad Daredia",
+        "self": true
+      },
+      "start": {
+        "date": "2020-11-29"
+      },
+      "end": {
+        "date": "2020-11-30"
+      },
+      "recurringEventId": "cf3beq6f25cijeau27qaqivsvc",
+      "originalStartTime": {
+        "date": "2020-11-29"
+      },
+      "transparency": "transparent",
+      "sequence": 0,
+      "reminders": {
+        "useDefault": false,
+        "overrides": [
+          {
+            "method": "popup",
+            "minutes": 10
+          }
+        ]
+      }
+    },
+    {
+      "kind": "calendar#event",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=dDkwamV1aGFuaTAwZzM3dTFucWNoYzM4bW9fMjAyMDExMjkgc2hlaHphZC5kYXJlZGlhQG0",
+      "created": "2011-11-29T19:12:38.000Z",
+      "updated": "2018-11-29T19:58:43.431Z",
+      "summary": "Amol's bday",
+      "creator": {
+        "email": "redacted@gmail.com",
+        "displayName": "Shehzad Daredia",
+        "self": true
+      },
+      "organizer": {
+        "email": "redacted@gmail.com",
+        "displayName": "Shehzad Daredia",
+        "self": true
+      },
+      "start": {
+        "date": "2020-11-29"
+      },
+      "end": {
+        "date": "2020-11-30"
+      },
+      "recurringEventId": "t90jeuhani00g37u1nqchc38mo",
+      "originalStartTime": {
+        "date": "2020-11-29"
+      },
+      "transparency": "transparent",
+      "sequence": 0,
+      "reminders": {
+        "useDefault": false,
+        "overrides": [
+          {
+            "method": "popup",
+            "minutes": 10
+          }
+        ]
+      }
+    },
+    {
+      "kind": "calendar#event",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=c25wbXBla2M3N24xOWY1YWFydnZ1YzRpbG9fMjAyMDExMzAgc2hlaHphZC5kYXJlZGlhQG0",
+      "created": "2010-08-26T03:01:10.000Z",
+      "updated": "2018-11-30T18:34:00.376Z",
+      "summary": "stefan's bday",
+      "creator": {
+        "email": "redacted@gmail.com",
+        "displayName": "Shehzad Daredia",
+        "self": true
+      },
+      "organizer": {
+        "email": "redacted@gmail.com",
+        "displayName": "Shehzad Daredia",
+        "self": true
+      },
+      "start": {
+        "date": "2020-11-30"
+      },
+      "end": {
+        "date": "2020-12-01"
+      },
+      "recurringEventId": "snpmpekc77n19f5aarvvuc4ilo",
+      "originalStartTime": {
+        "date": "2020-11-30"
+      },
+      "transparency": "transparent",
+      "sequence": 0,
+      "reminders": {
+        "useDefault": false,
+        "overrides": [
+          {
+            "method": "email",
+            "minutes": 10080
+          },
+          {
+            "method": "popup",
+            "minutes": 10
+          }
+        ]
+      }
+    },
+    {
+      "kind": "calendar#event",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=MmhodGJlaHU4dm9uMWR0bWc1YXQ3YW40NnIgc2hlaHphZC5kYXJlZGlhQG0",
+      "created": "2020-11-17T01:15:33.000Z",
+      "updated": "2020-11-25T20:12:03.786Z",
+      "summary": "Gaingels Q&A Call",
+      "description": "Zoom followed by Q&A for the remainder of the hour.",
+      "location": "dial in",
+      "creator": {
+        "email": "redacted@gmail.com"
+      },
+      "organizer": {
+        "email": "redacted@gmail.com"
+      },
+      "start": {
+        "dateTime": "2020-11-30T15:00:00-06:00"
+      },
+      "end": {
+        "dateTime": "2020-11-30T16:00:00-06:00"
+      },
+      "sequence": 1,
+      "attendees": [
+        {
+          "email": "redacted@gmail.com",
+          "organizer": true,
+          "responseStatus": "accepted"
+        },
+        {
+          "email": "redacted@gmail.com",
+          "self": true,
+          "responseStatus": "needsAction"
+        }
+      ],
+      "reminders": {
+        "useDefault": true
+      }
+    },
+    {
+      "kind": "calendar#event",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=N3RtaTBhNzVlZjU4N2t1ZDhrdGM2MmJvM2ggc2hlaHphZC5kYXJlZGlhQG0",
+      "created": "2020-11-09T04:42:18.000Z",
+      "updated": "2020-11-09T04:42:18.061Z",
+      "summary": "N 2020 StartOut Demo Day",
+      "description": "For details, go here:<br>https://www.eventbrite.com<br><br><br><p>Join StartOut entrepreneurs as they present their solutions at StartOut Demo Day, generously sponsored by AWS and SVB. This year's virtual Demo Day is an opportunity for the most innovative LGBTQ startups from the StartOut community to demonstrate their product, discuss their go-to-market strategy and pitch for future fundraising rounds in front of a panel of angel investors, venture capitalists and brands. Join us for an evening of discussion among some of the brightest entrepreneurs and investors in our community.</p><p>Applications to pitch are due on October 31st. Feel free to&nbsp;<a href=\"https://startout.typeform.com/to/YjslT5S9\">apply here</a>.</p><br><p>Schedule</p><p>5:00: Welcome and Judge Introductions</p><p>5:15: Pitches Begin</p><p>6:30: Winners Announced</p>",
+      "creator": {
+        "email": "redacted@gmail.com",
+        "self": true
+      },
+      "organizer": {
+        "email": "redacted@gmail.com",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2020-12-01T19:00:00-06:00"
+      },
+      "end": {
+        "dateTime": "2020-12-01T20:30:00-06:00"
+      },
+      "sequence": 0,
+      "reminders": {
+        "useDefault": true
+      }
+    },
+    {
+      "kind": "calendar#event",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=MGRwMjdsb292OWJnNmMzZmRyNTN1dTF2Y2Egc2hlaHphZC5kYXJlZGlhQG0",
+      "created": "2018-03-07T18:27:56.000Z",
+      "updated": "2020-10-26T02:04:20.538Z",
+      "summary": "N trivia night",
+      "description": "invite friends",
+      "location": "Hi Tops, 2247 Market St, San Francisco, CA 94114, USA",
+      "creator": {
+        "email": "redacted@gmail.com"
+      },
+      "organizer": {
+        "email": "redacted@gmail.com",
+        "displayName": "Shehzad Daredia",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2020-12-01T22:00:00-06:00"
+      },
+      "end": {
+        "dateTime": "2020-12-02T00:00:00-06:00"
+      },
+      "sequence": 114,
+      "hangoutLink": "https://plus.google.com/hangouts/_/calendar/c2hlaHphZC5kYXJlZGlhQGdtYWlsLmNvbQ.0dp27loov9bg6c3fdr53uu1vca",
+      "conferenceData": {
+        "createRequest": {
+          "requestId": "2hh3gdn7konpg40lnqi7gnl680",
+          "conferenceSolutionKey": {
+            "type": "eventHangout"
+          },
+          "status": {
+            "statusCode": "success"
+          }
+        },
+        "entryPoints": [
+          {
+            "entryPointType": "video",
+            "uri": "https://plus.google.com/hangouts/_/calendar/c2hlaHphZC5kYXJlZGlhQGdtYWlsLmNvbQ.0dp27loov9bg6c3fdr53uu1vca"
+          }
+        ],
+        "conferenceSolution": {
+          "key": {
+            "type": "eventHangout"
+          },
+          "name": "Hangouts",
+          "iconUri": "https://lh5.googleusercontent.com/proxy/9vT2XwMHPzrIcW56Ic3FX6_OSYvrjHEwOUYOmA0eMoR-_sY59k4mQMd0JnqCp8GCOmqimFKP3vSeFaIe4k5MewpEcCuK6PXlB2Z4AKTMV78OB_CJqXHrrkAO-yf5FYJsiaTBwjUP9cU0lRlP-HPC2w"
+        },
+        "signature": "AGkP/s1F3pDdqmizddZArUf2wmZj"
+      },
+      "reminders": {
+        "useDefault": true
+      }
+    }
+  ]
+}
