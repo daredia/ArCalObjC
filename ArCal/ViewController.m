@@ -22,12 +22,27 @@ NSString *cellId = @"cellId";
     [super viewDidLoad];
 
     [self setupEvents];
+    [self fetchEvents];
 
 //    self.view.backgroundColor = [UIColor yellowColor];
     self.navigationItem.title = @"Events";
     self.navigationController.navigationBar.prefersLargeTitles = YES;
 
     [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:cellId];
+}
+
+- (void)fetchEvents {
+    NSLog(@"Fetching events...");
+
+    NSString *urlString = @"https://daredia.github.io/ArCalObjC/sample_gcal_events.json";
+    NSURL *url = [NSURL URLWithString:urlString];
+
+    [[NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+
+        NSString *responseJson = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"response json: %@", responseJson);
+
+    }] resume];
 }
 
 - (void)setupEvents {
