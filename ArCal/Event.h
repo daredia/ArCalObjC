@@ -12,8 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Event : NSObject
 
 @property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSDate *startTime;
-@property (strong, nonatomic) NSDate *endTime;
+// GCal's regular events have full datetimes
+@property (strong, nonatomic, nullable) NSDate *startTime;
+@property (strong, nonatomic, nullable) NSDate *endTime;
+// GCal's all-day events have dates but not times
+@property (strong, nonatomic, nullable) NSDate *startDate;
+@property (strong, nonatomic, nullable) NSDate *endDate;
 
 @end
 
