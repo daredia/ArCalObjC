@@ -90,7 +90,7 @@ NSString *cellId = @"cellId";
     return [dateFormatter dateFromString:datetime];
 }
 
-- (NSString *)getEventCellText:(Event *)event {
+- (NSString *)formatEventDatetime:(Event *)event {
     NSDateFormatter *datetimeFormatter = NSDateFormatter.new;
     [datetimeFormatter setDateFormat:@"MM/dd/yy · h:mm a"];
     NSString *startTime = [datetimeFormatter stringFromDate:event.startTime];
@@ -99,21 +99,22 @@ NSString *cellId = @"cellId";
     [dateFormatter setDateFormat:@"MM/dd/yy"];
     NSString *startDate = [dateFormatter stringFromDate:event.startDate];
 
-    NSMutableArray *cellLabelTexts = NSMutableArray.new;
-    // Add datetime or date to the label - only one will be populated
+    // Return datetime or date - only one will be populated
     if (startTime != nil) {
-        [cellLabelTexts addObject:startTime];
+        return startTime;
     }
     if (startDate != nil) {
-        [cellLabelTexts addObject:startDate];
+        return startDate;
     }
-    [cellLabelTexts addObject:event.title];
 
-    return [cellLabelTexts componentsJoinedByString:@"\n"];
+    // This should never happen
+    return @"No date";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    // TODO(shez): what happens if we dont dequeue a cell for index path?
+    // UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    UITableViewCell *cell = [UITableViewCell.new initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
 
     Event *event = self.events[indexPath.row];
 
@@ -121,7 +122,8 @@ NSString *cellId = @"cellId";
     cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     cell.textLabel.numberOfLines = 0;
     cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:17.0];
-    cell.textLabel.text =  [self getEventCellText:event];
+    cell.textLabel.text = event.title;
+    cell.detailTextLabel.text = [self formatEventDatetime:event];
     return cell;
 }
 
