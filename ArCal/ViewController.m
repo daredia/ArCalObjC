@@ -94,7 +94,7 @@ NSString *cellId = @"cellId";
 
 - (NSString *)getEventCellText:(Event *)event {
     NSDateFormatter *datetimeFormatter = NSDateFormatter.new;
-    [datetimeFormatter setDateFormat:@"MM/dd/yy h:mm a"];
+    [datetimeFormatter setDateFormat:@"MM/dd/yy · h:mm a"];
     NSString *startTime = [datetimeFormatter stringFromDate:event.startTime];
 
     NSDateFormatter *dateFormatter = NSDateFormatter.new;
@@ -111,7 +111,7 @@ NSString *cellId = @"cellId";
     }
     [cellLabelTexts addObject:event.title];
 
-    return [cellLabelTexts componentsJoinedByString:@" "];
+    return [cellLabelTexts componentsJoinedByString:@"\n"];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -120,8 +120,15 @@ NSString *cellId = @"cellId";
     Event *event = self.events[indexPath.row];
 
     cell.backgroundColor = UIColor.whiteColor;
+    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    cell.textLabel.numberOfLines = 0;
+    cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:17.0];
     cell.textLabel.text =  [self getEventCellText:event];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 70;
 }
 
 
