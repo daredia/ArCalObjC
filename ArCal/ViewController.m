@@ -23,7 +23,7 @@ NSString *cellId = @"cellId";
 
     [self fetchEvents];
 
-//    self.view.backgroundColor = [UIColor yellowColor];
+    self.view.backgroundColor = [UIColor systemGreenColor];
     self.navigationItem.title = @"Events";
     self.navigationController.navigationBar.prefersLargeTitles = YES;
 
@@ -119,7 +119,7 @@ NSString *cellId = @"cellId";
 
     Event *event = self.events[indexPath.row];
 
-    cell.backgroundColor = UIColor.lightGrayColor;
+    cell.backgroundColor = UIColor.whiteColor;
     cell.textLabel.text =  [self getEventCellText:event];
     return cell;
 }
