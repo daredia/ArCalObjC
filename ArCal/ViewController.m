@@ -93,13 +93,22 @@ NSString *cellId = @"cellId";
 }
 
 - (NSString *)getEventCellText:(Event *)event {
-    NSString *startTime;
+    NSDateFormatter *datetimeFormatter = NSDateFormatter.new;
+    [datetimeFormatter setDateFormat:@"MM/dd/yy h:mm a"];
+    NSString *startTime = [datetimeFormatter stringFromDate:event.startTime];
+
     NSDateFormatter *dateFormatter = NSDateFormatter.new;
-    [dateFormatter setDateFormat:@"h:mm"];
-    startTime = [dateFormatter stringFromDate:event.startTime];
+    [dateFormatter setDateFormat:@"MM/dd/yy"];
+    NSString *startDate = [dateFormatter stringFromDate:event.startDate];
 
     NSMutableArray *cellLabelTexts = NSMutableArray.new;
-    [cellLabelTexts addObject:startTime];
+    // Add datetime or date to the label - only one will be populated
+    if (startTime != nil) {
+        [cellLabelTexts addObject:startTime];
+    }
+    if (startDate != nil) {
+        [cellLabelTexts addObject:startDate];
+    }
     [cellLabelTexts addObject:event.title];
 
     return [cellLabelTexts componentsJoinedByString:@" "];
