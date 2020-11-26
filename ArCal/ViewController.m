@@ -31,8 +31,6 @@ NSString *cellId = @"cellId";
 }
 
 - (void)fetchEvents {
-    NSLog(@"Fetching events...");
-
     NSString *urlString = @"https://daredia.github.io/ArCalObjC/sample_gcal_events.json";
     NSURL *url = [NSURL URLWithString:urlString];
 
