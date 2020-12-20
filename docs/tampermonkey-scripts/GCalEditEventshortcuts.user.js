@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GCal Edit Event shortcuts
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       You
 // @match        https://calendar.google.com/calendar/*/*/r/eventedit*
@@ -12,6 +12,13 @@
     'use strict';
 
     document.addEventListener('keydown', evt => {
+        // Command + L -> Give focus to event location text field
+        if (evt.metaKey && evt.key === 'l') {
+            evt.preventDefault();
+            const locationInput = document.querySelector('input[aria-label="Location"]');
+            locationInput.focus();
+        }
+
         // Command + D -> Give focus to event description text area
         if (evt.metaKey && evt.key === 'd') {
         evt.preventDefault();
