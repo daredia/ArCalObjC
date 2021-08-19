@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         GCal Month View Shortcuts
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  try to take over the world!
 // @author       You
 // @match        https://calendar.google.com/calendar/*/*/r/month*
+// @icon         https://www.google.com/s2/favicons?domain=calendar.google.com
 // @grant        none
 // ==/UserScript==
 
@@ -58,11 +59,18 @@
         });
     }
 
-    function giveFocusToLastEvent() {
-        const pastEvents = document.querySelectorAll('.UflSff');
-        if (pastEvents.length) {
-            const mostRecentEvent = pastEvents[pastEvents.length - 1];
-            mostRecentEvent.focus();
+    function giveFocusToFirstEvent() {
+        const allEvents = document.querySelectorAll('[data-eventchip]');
+        if (allEvents.length) {
+            const eventsAfterYesterday = Array.from(allEvents).filter(node => {
+                const parentWithDateStr = parentWith(node, (node) => node.firstElementChild.innerText.includes('event'));
+                const dateStr = parentWithDateStr.firstElementChild.innerText + ', ' + new Date().getFullYear();
+                const dateStrClean = dateStr.replace(/, today/i, '').split(/event[s]?,/)[1];
+                return new Date().setHours(0, 0, 0, 0) <= Date.parse(dateStrClean);
+            });
+
+            const firstEventAfterYesterday = eventsAfterYesterday[0];
+            firstEventAfterYesterday?.firstElementChild?.focus();
         }
     }
 
@@ -118,10 +126,10 @@
             }
         }
 
-        // Command + F -> Give focus to the event that ended most recently
+        // Command + F -> Give focus to the event that starts first
         if (evt.metaKey && evt.key === 'f') {
             evt.preventDefault();
-            giveFocusToLastEvent();
+            giveFocusToFirstEvent();
         }
     });
 
