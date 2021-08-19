@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         Messengerscape
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  Press Escape to exit a Facebook Messenger DM and return to Inbox
 // @author       You
 // @match        https://www.facebook.com/messages*
+// @icon         https://www.google.com/s2/favicons?domain=facebook.com
 // @grant        none
 // ==/UserScript==
 
@@ -20,7 +21,9 @@
         newMsgBtn.click();
         setTimeout(() => {
             const newMsgDropdown = document.querySelector('[role="listbox"]');
-            newMsgDropdown.style.display = "none";
+            if (newMsgDropdown) {
+                newMsgDropdown.parentElement.style.display = "none";
+            }
         }, 100);
     }
 
@@ -60,7 +63,10 @@
         // Command + H -> Hide currently selected conversation
         if (evt.metaKey && evt.key === 'h') {
             openConvoActionsMenu();
-            setTimeout(() => clickConvoMenuItem('Hide Conversation'), 100);
+            setTimeout(() => {
+                clickConvoMenuItem('Archive Chat');
+                exitAllConvos();
+            }, 100);
         }
 
         // Command + F -> Give focus to first conversation in list
