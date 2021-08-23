@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Messengerscape
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  Press Escape to exit a Facebook Messenger DM and return to Inbox
 // @author       You
 // @match        https://www.facebook.com/messages*
@@ -12,24 +12,27 @@
 (function() {
     'use strict';
 
+    function sleep(ms) {
+        return new Promise((res, rej) => setTimeout(res, ms));
+    }
+
     function clickConvoMenuItem(label) {
         Array.from(document.querySelectorAll('[role="menuitem"]')).find(el => el.textContent === label).click();
     }
 
-    function exitAllConvos() {
+    async function exitAllConvos() {
         const newMsgBtn = document.querySelector('[aria-label="New Message"]');
         newMsgBtn.click();
-        setTimeout(() => {
-            const newMsgDropdown = document.querySelector('[role="listbox"]');
-            if (newMsgDropdown) {
-                newMsgDropdown.parentElement.style.display = "none";
-            }
-        }, 100);
+        await sleep(100);
+        const newMsgDropdown = document.querySelector('[role="listbox"]');
+        if (newMsgDropdown) {
+            newMsgDropdown.parentElement.style.display = "none";
+        }
     }
 
-    function openConvoActionsMenu() {
+    async function openConvoActionsMenu(activeThreadName) {
         // Open conversation actions menu
-        const activeThreadName = getActiveThreadName();
+        activeThreadName = activeThreadName || getActiveThreadName();
         console.log({activeThreadName});
         if (!activeThreadName) {
             return;
@@ -39,13 +42,14 @@
             .find(el => el.textContent.includes(activeThreadName));
         console.log({activeThreadNode: activeThreadNode.textContent});
         activeThreadNode.querySelector('[aria-label="Menu"]').click();
+        await sleep(100);
     }
 
     function getActiveThreadName() {
         return document.querySelector('[role="main"] span:not([data-visualcompletion="ignore"])').innerText;
     }
 
-    document.addEventListener('keydown', evt => {
+    document.addEventListener('keydown', async evt => {
         // Esc -> exit all conversations
         if (evt.keyCode === 27) {
             exitAllConvos();
@@ -53,20 +57,20 @@
 
         // Command + U -> Mark currently selected conversation as Unread
         if (evt.metaKey && evt.key === 'u') {
-            openConvoActionsMenu();
-            setTimeout(() => {
-                clickConvoMenuItem('Mark as Unread');
-                exitAllConvos();
-            }, 100);
+            // hack: messenger has a bug where even manually marking unread while a thread is selected doesnt really work,
+            // so work around this by exiting 1st, then marking unread
+            const activeThreadName = getActiveThreadName();
+            await exitAllConvos();
+            await sleep(100);
+            await openConvoActionsMenu(activeThreadName);
+            clickConvoMenuItem('Mark as Unread');
         }
 
         // Command + H -> Hide currently selected conversation
-        if (evt.metaKey && evt.key === 'h') {
-            openConvoActionsMenu();
-            setTimeout(() => {
-                clickConvoMenuItem('Archive Chat');
-                exitAllConvos();
-            }, 100);
+        if (evt.metaKey && evt.key === 'i') {
+            await openConvoActionsMenu();
+            clickConvoMenuItem('Archive Chat');
+            exitAllConvos();
         }
 
         // Command + F -> Give focus to first conversation in list
