@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Messengerscape
 // @namespace    http://tampermonkey.net/
-// @version      0.4
+// @version      0.5
 // @description  Press Escape to exit a Facebook Messenger DM and return to Inbox
 // @author       You
 // @match        https://www.facebook.com/messages*
@@ -21,7 +21,7 @@
     }
 
     async function exitAllConvos() {
-        const newMsgBtn = document.querySelector('[aria-label="New Message"]');
+        const newMsgBtn = document.querySelector('[aria-label="New message"]');
         newMsgBtn.click();
         await sleep(100);
         const newMsgDropdown = document.querySelector('[role="listbox"]');
